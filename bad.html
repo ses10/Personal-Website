@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<title>Home</title>
+	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="pumpkin.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	</head>
+	
+	<body>
+		<div class="container" id="pumpkins">
+		
+			<!--Start Navigation-->
+			<nav class="navbar navbar-default navbar-static-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					  <a class="navbar-brand" href="index.html">Dennis Sesma</a>
+					</div>
+					
+					<div>
+					  <ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Me</a></li> 
+						<li><a href="news.html">News Event</a></li> 
+						<li><a href="blog.html">Blog</a></li> 
+						<li class="active"><a href="#">Contact</a></li> 
+					  </ul>
+					</div>
+				</div>
+			</nav>
+			<!--End Navigation-->
+			
+			<h1>Why that website <b>SUCKED</b></h1>
+			
+			<ol>
+				<li>The site uses multiple copies of a single photo as background instead of 1 single</li>
+				<li>The navigation font color is hard to see</li>
+				<li>The font color used to display hours of business should be in contrast with the background</li>
+				<li>Multiple pages in site did not use a clear font</li>
+				<li>Site does not use consistent color scheme</li>
+				<li>Homepage makes you wonder if you are looking at a professional site</li>
+				<li>Download page uses too large of images</li>
+				<li>Website is not responsive</li>
+				<li>There is no clear Call to Action (ex: Book an Appointment)</li>
+				<li>The website wasn't made by me</li>
+			</ol>
+			
+		</div>
+		
+				<script>
+			    function pumpkins() {
+    
+        var pumpkin = $('<div class="pumpkins"></div>');
+        $('#pumpkins').prepend(pumpkin);
+        pumpX = Math.floor(Math.random() * $('body').width());
+        pumpSpd = Math.floor(Math.random() + 5000);
+
+       pumpkin.css({'left':pumpX+'px'});
+        pumpkin.animate({
+            top: "500px",
+            opacity : "0",
+
+        }, pumpSpd, function(){
+            $(this).remove();
+            pumpkins();
+        });
+
+    }
+    var timer = Math.floor(Math.random() +1000);
+    
+    window.setInterval(function(){
+        pumpkins();
+    }, timer);
+		</script>
+
+	</body>
+</html>
+
+
