@@ -1,0 +1,9 @@
+.pumpkins {
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index:200;
+    width:16px;
+    height:16px;
+    background-image: url('http://f.cl.ly/items/3k2T0P2N2h1x2x052r18/pumpkin.png');
+}
