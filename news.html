@@ -9,6 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="pumpkin.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<script src="script.js"></script>
+
 
 	</head>
 	
@@ -48,34 +51,7 @@
 ALEXANDRIA,  part of an effort to provide young people with the tools necessary to make responsible decisions, a coalition of the nation’s leading anti-drug activists launched a new initiative Tuesday with the goal of teaching teenagers to resist pressure from psychiatrists to use drugs. “A lot of teens just don’t know how to say no when drugs are constantly pushed on them by mental health professionals, and we aim to remedy that,” campaign director Karen Thorpe said of the initiative, which will implement programs at high schools and middle schools nationwide in which 13-to-18-year-olds can discuss times they have felt coerced into trying controlled substances during therap			
 			</p>
 
-		</div>
-		
-				<script>
-			    function pumpkins() {
-    
-        var pumpkin = $('<div class="pumpkins"></div>');
-        $('#pumpkins').prepend(pumpkin);
-        pumpX = Math.floor(Math.random() * $('body').width());
-        pumpSpd = Math.floor(Math.random() + 5000);
-
-       pumpkin.css({'left':pumpX+'px'});
-        pumpkin.animate({
-            top: "500px",
-            opacity : "0",
-
-        }, pumpSpd, function(){
-            $(this).remove();
-            pumpkins();
-        });
-
-    }
-    var timer = Math.floor(Math.random() +1000);
-    
-    window.setInterval(function(){
-        pumpkins();
-    }, timer);
-		</script>
-
+		</div>		
 	</body>
 </html>
 

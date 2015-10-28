@@ -9,6 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="pumpkin.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<script src="script.js"></script>
+
 
 	</head>
 	
@@ -41,34 +44,7 @@
 			<h4><b>Cell:</b> 123-456-7890</h4>
 			<h4><b>Twitter:</b> @IdontuUseTwitter</h4>
 			<h4><b>Myspace:</b> Forgot It...</h4>
-		</div>
-		
-				<script>
-			    function pumpkins() {
-    
-        var pumpkin = $('<div class="pumpkins"></div>');
-        $('#pumpkins').prepend(pumpkin);
-        pumpX = Math.floor(Math.random() * $('body').width());
-        pumpSpd = Math.floor(Math.random() + 5000);
-
-       pumpkin.css({'left':pumpX+'px'});
-        pumpkin.animate({
-            top: "500px",
-            opacity : "0",
-
-        }, pumpSpd, function(){
-            $(this).remove();
-            pumpkins();
-        });
-
-    }
-    var timer = Math.floor(Math.random() +1000);
-    
-    window.setInterval(function(){
-        pumpkins();
-    }, timer);
-		</script>
-
+		</div>		
 	</body>
 </html>
 
