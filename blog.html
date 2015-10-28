@@ -7,11 +7,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+			<link rel="stylesheet" href="pumpkin.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 	</head>
 	
 	<body>
-		<div class="container">
+		<div class="container" id="pumpkins">
 		
 			<!--Start Navigation-->
 			<nav class="navbar navbar-default navbar-static-top">
@@ -46,6 +48,33 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id gravida leo, id tempor massa. Pellentesque quis elit vel nunc accumsan sollicitudin vel rutrum quam. Nam molestie ullamcorper porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam massa nulla, vestibulum vel turpis at, mollis luctus mauris. Vestibulum quis magna sed massa aliquet blandit. Nulla vel eros metus. Fusce scelerisque enim euismod, auctor enim quis, facilisis tortor.</p>
 
 		</div>
+		
+				<script>
+			    function pumpkins() {
+    
+        var pumpkin = $('<div class="pumpkins"></div>');
+        $('#pumpkins').prepend(pumpkin);
+        pumpX = Math.floor(Math.random() * $('body').width());
+        pumpSpd = Math.floor(Math.random() + 5000);
+
+       pumpkin.css({'left':pumpX+'px'});
+        pumpkin.animate({
+            top: "500px",
+            opacity : "0",
+
+        }, pumpSpd, function(){
+            $(this).remove();
+            pumpkins();
+        });
+
+    }
+    var timer = Math.floor(Math.random() +1000);
+    
+    window.setInterval(function(){
+        pumpkins();
+    }, timer);
+		</script>
+
 	</body>
 </html>
 
